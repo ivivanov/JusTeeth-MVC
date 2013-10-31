@@ -24,7 +24,7 @@ namespace JusTeeth.App.Hubs
 
         public void SendMessageToRoom(string message, string room)
         {
-            var msg = string.Format("{0}: {1}", Context.ConnectionId, message);
+            var msg = string.Format("{0} : {1}", Context.ConnectionId, message);
             Clients.Group(room).addMessage(msg);
         }
     }
